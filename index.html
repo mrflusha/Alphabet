@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"/>
+</head>
+<body>
+	<div id = 'ask_value'></div>
+	<div id = 'input_value'>
+		<form>
+			<p><input id = "answer" type="text" name="" maxlength="1" placeholder="input characher"></p>
+			<p><input id = "button" type="button" value="Проверить" onclick="match_char()"></p>
+		</form>
+
+	</div>
+
+
+	<script type="text/javascript">
+				function getRandomInt(max) {
+		  			return Math.floor(Math.random() * max);
+		  		}
+
+
+
+		  		function match_char(){
+					let answer_value = document.getElementById("answer").value;
+
+		  			if (random_char === answer_value.toLowerCase()) {
+		  				alert("Правильно");
+		  				random_char = next_char()
+		  				return random_char
+		  			}else{
+		  				alert("Попробуй ещё раз");
+		  			}
+
+		  		}
+
+		  		function next_char(){
+					let cryllic = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890";
+
+					let random_char = cryllic[getRandomInt(43)];
+					let ask_value = document.getElementById("ask_value");
+					document.getElementById("ask_value").innerText = random_char;
+					console.log(random_char);
+					return random_char 
+
+		  		}
+		  		random_char = next_char()
+		
+
+	
+		
+
+	</script>
+</body>
+</html>
