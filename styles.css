@@ -22,7 +22,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 25wv;
+	font-size: 250px;
 	color: pink;
 	border: 1px solid #B2AE79;
 	width: 45vw;
@@ -57,7 +57,7 @@ body{
     color: black; 
     border: 2px solid #f44336;
     border-radius: 100% 100%;
-    font-size: 25vw;
+    font-size: 230px;
     font-family: 'Mukta', sans-serif;
 
 }
