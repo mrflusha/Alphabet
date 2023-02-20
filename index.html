@@ -11,26 +11,51 @@
 		<form>
 			<p><input id = "answer" type="text" name="" maxlength="1" placeholder="input characher"></p>
 			<p><input id = "button" type="button" value="Проверить" onclick="match_char()"></p>
+			<input type="color" name="">
 		</form>
+			<div id="buttons">
+				<button class="button"></button>
+				<button class="button"></button>
+				<button class="button"></button>
+			</div>
 
 	</div>
 
 
 	<script type="text/javascript">
+
+
+				let buttons = document.getElementsByClassName("button");
+				let cryllic = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890";
+
+				//let btns = document.querySelectorAll('button');
 				
+
+		  		random_char = next_char();
+
+
+
+
+				
+
+
+
+
 				function getRandomInt(max) {
 		  			return Math.floor(Math.random() * max);
 		  		}
 
 
 
-		  		function match_char(){
-					let answer_value = document.getElementById("answer").value;
 
+		  		function match_char(char){
+					//let answer_value = document.getElementById("answer").value;
+					let answer_value = char;
+					
 		  			if (random_char === answer_value.toLowerCase()) {
 		  				alert("Правильно");
-		  				random_char = next_char()
-		  				return random_char
+		  				random_char = next_char();
+		  				return random_char;
 		  			}else{
 		  				alert("Попробуй ещё раз");
 		  			}
@@ -38,16 +63,36 @@
 		  		}
 
 		  		function next_char(){
-					let cryllic = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890";
 
 					let random_char = cryllic[getRandomInt(43)];
 					let ask_value = document.getElementById("ask_value");
 					document.getElementById("ask_value").innerText = random_char;
-					console.log(random_char);
-					return random_char 
+					let answer_rand =  getRandomInt(buttons.length);
+					buttons[answer_rand].textContent = random_char;
+
+					for (let i = 0 ;i <= buttons.length-1;i++){
+						console.log(answer_rand)
+						if (i !== answer_rand) {
+							buttons[i].textContent = cryllic[getRandomInt(cryllic.length)];
+							//console.log(buttons[i].textContent);
+
+						}
+						buttons[i].onclick = function (){match_char(buttons[i].textContent)};
+
+					}
+
+
+
+
+
+
+
+					//console.log(random_char);
+					return random_char; 
+
+
 
 		  		}
-		  		random_char = next_char()
 		
 
 	
