@@ -11,7 +11,7 @@ body{
 	justify-content: space-around;
 	flex-direction: column;
 	flex-wrap: wrap;
-	background-color: #023637;
+	background-color: #7AB7AB;
 	font-family: 'Phudu', cursive;
 	line-height: 50vh;
 
@@ -31,7 +31,7 @@ body{
 	border: 1px solid #B2AE79;
 	border-radius: 50% 50%;
 	width: 45vw;
-	background-color: #0FDAA2;
+	background-color: #B7EAE0;
 	color: #A00FDA;
 	position: relative;
 	min-width: 300px;
@@ -65,8 +65,8 @@ body{
 	display: flex;
 
 	background-color: white; 
-    color: black; 
-    border: 2px solid #f44336;
+    color: #371E37; 
+    border: 2px solid #C392C1;
     border-radius: 25% 10%;
     font-size: 15vw;
     font-family: 'Phudu', cursive;
@@ -80,6 +80,7 @@ body{
     color: white;
 }
 */
+
 form{
 	display: none;
 }

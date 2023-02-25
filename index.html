@@ -41,15 +41,18 @@
 				
 
 		  		random_char = next_char();
-		  		ads()
+		  		ads();
 
 
 		  		function ads() {
 				  		vkBridge.send('VKWebAppShowBannerAd', {
-							  banner_location: 'top'
+							  banner_location: 'top',
+							  layout_type: 'resize',
+							  can_close: 'false'
 							  })
 							 .then((data) => { 
 							    if (data.result) {
+							    	console.log('show ad')
 							      // Баннерная реклама отобразилась
 
 							    }
@@ -82,13 +85,13 @@
 		  		function match_char(char,btn){
 					//let answer_value = document.getElementById("answer").value;
 					let answer_value = char;
-					console.log(char);
+					//console.log(char);
 					btn.style.backgroundColor="#f44336";
 
 		  			if (random_char === answer_value.toLowerCase()) {
 		  				ads()
 		  				for (var i = buttons.length - 1; i >= 0; i--) {
-		  					buttons[i].style.backgroundColor = "#fff"
+		  					buttons[i].style.backgroundColor = "#fff";
 		  				}
 		  		
 		  				//alert("Правильно");
