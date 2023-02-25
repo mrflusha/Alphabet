@@ -74,12 +74,12 @@ body{
 
 }
 
-
+/*
 #buttons>button:hover{
 	background-color: #f44336;
     color: white;
 }
-
+*/
 form{
 	display: none;
 }

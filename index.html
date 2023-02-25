@@ -22,9 +22,10 @@
 
 		</div>
 	</div>
-
+	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 
 	<script type="text/javascript">
+				vkBridge.send("VKWebAppInit", {});
 
 
 				let buttons = document.getElementsByClassName("button");
@@ -50,11 +51,17 @@
 
 
 
-		  		function match_char(char){
+		  		function match_char(char,btn){
 					//let answer_value = document.getElementById("answer").value;
 					let answer_value = char;
-					
+					console.log(char);
+					btn.style.backgroundColor="#f44336";
+
 		  			if (random_char === answer_value.toLowerCase()) {
+		  				for (var i = buttons.length - 1; i >= 0; i--) {
+		  					buttons[i].style.backgroundColor = "#fff"
+		  				}
+		  		
 		  				alert("Правильно");
 		  				random_char = next_char();
 		  				return random_char;
@@ -79,7 +86,7 @@
 							//console.log(buttons[i].textContent);
 
 						}
-						buttons[i].onclick = function (){match_char(buttons[i].textContent)};
+						buttons[i].onclick = function (){match_char(buttons[i].textContent,buttons[i])};
 
 					}
 
