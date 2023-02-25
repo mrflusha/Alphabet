@@ -41,21 +41,27 @@
 				
 
 		  		random_char = next_char();
+		  		ads()
 
 
-		  		vkBridge.send('VKWebAppShowBannerAd', {
-					  banner_location: 'bottom'
-					  })
-					 .then((data) => { 
-					    if (data.result) {
-					      // Баннерная реклама отобразилась
-					    	
-					    }
-					  })
-					  .catch((error) => {
-					    // Ошибка
-					    console.log(error);
-					  });
+		  		function ads() {
+				  		vkBridge.send('VKWebAppShowBannerAd', {
+							  banner_location: 'top'
+							  })
+							 .then((data) => { 
+							    if (data.result) {
+							      // Баннерная реклама отобразилась
+
+							    }
+							  })
+							  .catch((error) => {
+							    // Ошибка
+							    console.log(error);
+							  });
+		  			
+		  		}
+
+
 
 
 
@@ -80,6 +86,7 @@
 					btn.style.backgroundColor="#f44336";
 
 		  			if (random_char === answer_value.toLowerCase()) {
+		  				ads()
 		  				for (var i = buttons.length - 1; i >= 0; i--) {
 		  					buttons[i].style.backgroundColor = "#fff"
 		  				}
@@ -106,6 +113,7 @@
 						if (i !== answer_rand) {
 							buttons[i].textContent = cryllic[getRandomInt(cryllic.length)];
 							//console.log(buttons[i].textContent);
+
 
 						}
 						buttons[i].onclick = function (){match_char(buttons[i].textContent,buttons[i])};
