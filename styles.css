@@ -3,15 +3,14 @@
 body{
 	margin: 0;
 	padding: 0;
-	width: 90vw;
-	height: 90vh;
+
 
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	background-color: #7AB7AB;
 	font-family: 'Phudu', cursive;
-	line-height: 50vh;
+	line-height: 35vh;
 
 
 }
@@ -21,16 +20,13 @@ body{
 
 	display: flex;
 	flex-direction: column;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	justify-content: center;
 
 
 }
 
-#empty{
-	display: flex;
-	margin-top: 10vh;
-}
+
 #count{
 	margin-top: 3vh;
 	display: flex;
@@ -45,6 +41,8 @@ body{
 
 
 #ask_value{
+
+
 	    -webkit-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -64,7 +62,7 @@ body{
 	max-width: 350px;
 	max-width: 350px;
 	margin-left: 5vh;
-	margin-top: 10%;
+	margin-top: 150px;
 }
 
 #input_value{
