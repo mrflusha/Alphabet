@@ -49,9 +49,8 @@
 
 		  		function ads() {
 				  		vkBridge.send('VKWebAppShowBannerAd', {
-							  banner_location: 'bottom',
-							  layout_type: 'resize',
-							  can_close: 'true'
+							  banner_location: 'top',
+							  can_close: 'false'
 							  })
 							 .then((data) => { 
 							    if (data.result) {
