@@ -26,6 +26,11 @@ body{
 
 
 }
+
+#empty{
+	display: flex;
+	margin-top: 10vh;
+}
 #count{
 	margin-top: 3vh;
 	display: flex;

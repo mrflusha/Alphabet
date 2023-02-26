@@ -7,6 +7,7 @@
 </head>
 <body>
 	<div id = "body">
+
 		<div id = 'count'>Колличество</div>
 		<div id = 'ask_value'></div>
 		<div id = 'input_value'>
@@ -50,8 +51,8 @@
 		  		function ads() {
 				  		vkBridge.send('VKWebAppShowBannerAd', {
 							  banner_location: 'bottom',
-							  layout_type: 'overlay',
-							  can_close: 'true'
+							 
+							  can_close: 'false'
 							  })
 							 .then((data) => { 
 							    if (data.result) {
