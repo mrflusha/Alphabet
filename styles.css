@@ -27,7 +27,7 @@ body{
 
 }
 #count{
-	margin-top: 3%;
+	margin-top: 3vh;
 	display: flex;
 	line-height: 5%;
 	position: relative;
