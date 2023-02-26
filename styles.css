@@ -47,13 +47,17 @@ body{
 	font-size: 4vw;
 	align-items: center;
 	line-height: 150px;
+	
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 
 #ask_value{
 
 
-	    -webkit-user-select: none;
+	-webkit-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
 	display: flex;
