@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300;700&display=swap');
+*{
+}
 
 body{
 	margin: 0;
 	padding: 0;
+	width: 90vw;
+	height: 90vh;
 
 
 	display: flex;
@@ -10,18 +14,23 @@ body{
 	justify-content: space-around;
 	background-color: #7AB7AB;
 	font-family: 'Phudu', cursive;
-	line-height: 35vh;
+	line-height: 30vh;
+
 
 
 }
 
 
 #body{
+	max-width: 600px;
+	max-height: 1050px;
+	
 
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
+	flex-wrap: nowrap;
+	justify-content: space-arownd;
+	align-items: center;
 
 
 }
