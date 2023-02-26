@@ -9,13 +9,30 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	flex-direction: column;
-	flex-wrap: wrap;
 	background-color: #7AB7AB;
 	font-family: 'Phudu', cursive;
 	line-height: 50vh;
 
 
+}
+
+
+#body{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+
+
+}
+#count{
+	margin-top: 3%;
+	display: flex;
+	line-height: 5%;
+	position: relative;
+	color: #520000;
+	justify-content: flex-end;
+	font-size: 3vw;
 }
 
 
@@ -39,6 +56,7 @@ body{
 	max-width: 350px;
 	max-width: 350px;
 	margin-left: 5vh;
+	margin-top: 10%;
 }
 
 #input_value{

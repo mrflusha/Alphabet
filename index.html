@@ -7,6 +7,7 @@
 </head>
 <body>
 	<div id = "body">
+		<div id = 'count'>Колличество</div>
 		<div id = 'ask_value'></div>
 		<div id = 'input_value'>
 			<form>
@@ -36,6 +37,8 @@
 
 				let buttons = document.getElementsByClassName("button");
 				let cryllic = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890";
+				let count = 0;
+				let count_view = document.getElementById("count");
 
 				//let btns = document.querySelectorAll('button');
 				
@@ -46,7 +49,7 @@
 
 		  		function ads() {
 				  		vkBridge.send('VKWebAppShowBannerAd', {
-							  banner_location: 'top',
+							  banner_location: 'bottom',
 							  layout_type: 'resize',
 							  can_close: 'false'
 							  })
@@ -89,6 +92,8 @@
 					btn.style.backgroundColor="#f44336";
 
 		  			if (random_char === answer_value.toLowerCase()) {
+		  				count++;
+		  				
 		  				ads()
 		  				for (var i = buttons.length - 1; i >= 0; i--) {
 		  					buttons[i].style.backgroundColor = "#fff";
@@ -98,6 +103,7 @@
 		  				random_char = next_char();
 		  				return random_char;
 		  			}else{
+		  				count = 0
 		  				//alert("Попробуй ещё раз");
 		  			}
 
@@ -108,11 +114,12 @@
 					let random_char = cryllic[getRandomInt(43)];
 					let ask_value = document.getElementById("ask_value");
 					document.getElementById("ask_value").innerText = random_char;
+					count_view.innerText ="Отгадано правильно подряд " + count
 					let answer_rand =  getRandomInt(buttons.length);
 					buttons[answer_rand].textContent = random_char;
 
 					for (let i = 0 ;i <= buttons.length-1;i++){
-						console.log(answer_rand)
+						//console.log(answer_rand)
 						if (i !== answer_rand) {
 							buttons[i].textContent = cryllic[getRandomInt(cryllic.length)];
 							//console.log(buttons[i].textContent);
