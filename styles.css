@@ -12,7 +12,7 @@ body{
 
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 	background-color: #7AB7AB;
 	font-family: 'Phudu', cursive;
 	line-height: 30vh;
@@ -23,7 +23,7 @@ body{
 
 
 #body{
-	margin-top: 15%;
+	margin-left: 10vh;
 
 	
 
