@@ -49,8 +49,9 @@
 
 		  		function ads() {
 				  		vkBridge.send('VKWebAppShowBannerAd', {
-							  banner_location: 'top',
-							  can_close: 'false'
+							  banner_location: 'bottom',
+							  
+							  can_close: 'true'
 							  })
 							 .then((data) => { 
 							    if (data.result) {
@@ -103,6 +104,7 @@
 		  				return random_char;
 		  			}else{
 		  				count = 0
+		  				count_view.innerText = "Ошибка"
 		  				//alert("Попробуй ещё раз");
 		  			}
 
