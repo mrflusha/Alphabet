@@ -8,7 +8,10 @@
 <body>
 	<div id = "body">
 
-		<div id = 'ask_value'></div>
+		<div id = 'count'>Колличество</div>
+		<div>
+			<div id = 'ask_value'></div>
+		</div>
 		<div id = 'input_value'>
 			<form>
 				<p><input id = "answer" type="text" name="" maxlength="1" placeholder="input characher"></p>
@@ -22,7 +25,6 @@
 				</div>
 
 		</div>
-		<div id = 'count'>Колличество</div>
 	</div>
 
 
@@ -69,6 +71,22 @@
 		  		}
 
 
+		  		function vibro() {
+		  			bridge.send('VKWebAppTapticNotificationOccurred', {
+														  type: 'error'
+														  })
+														  .then((data) => { 
+														    if (data.result) {
+														      // Информация передана генератору
+														    }
+														  })
+														  .catch((error) => {
+														    // Ошибка
+														    console.log(error);
+  });
+		  		}
+
+
 
 
 
@@ -106,6 +124,7 @@
 		  			}else{
 		  				count = 0
 		  				count_view.innerText = "Ошибка"
+		  				vibro()
 		  				//alert("Попробуй ещё раз");
 		  			}
 
