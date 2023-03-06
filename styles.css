@@ -10,9 +10,9 @@ body{
 
 
 	display: flex;
-	align-items: center;
+	
 	justify-content: center;
-	background-color: #7AB7AB;
+	background-color: rgb(128, 114, 136);
 	font-family: 'Phudu', cursive;
 
 	
@@ -20,7 +20,24 @@ body{
 
 
 }
+#ava{
+	overflow: hidden;
+	display: none;
+	justify-content: flex-start;
+	border: 1px solid black;
+	border-radius: 50% 50%;
+	
+	width: 100px;
+	height: 100px;
+	
+}
+#header{
 
+	display: none;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+
+}
 
 #body{
 	
@@ -70,8 +87,8 @@ body{
 	width: 200px;
 	height: 200px;
 	
-	background-color: #B7EAE0;
-	color: #A00FDA;
+	background-color: rgb(118, 111, 111);
+	color: rgb(33, 68, 151);
 
 	
 	
