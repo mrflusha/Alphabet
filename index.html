@@ -41,7 +41,11 @@
 
 
 	<script type="text/javascript">
+
 				vkBridge.send("VKWebAppInit", {});
+				vkBridge.send('VKWebAppRetargetingPixel', {
+								  pixel_code: 'VK-RTRG-1697198-dg1wL'
+								});
 
 
 				let buttons = document.getElementsByClassName("button");
