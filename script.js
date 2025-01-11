@@ -1,4 +1,4 @@
-﻿vkBridge.send("VKWebAppInit", {});
+﻿//vkBridge.send("VKWebAppInit", {});
 
 /* YANDEX FUNCTIONS DONT NEED NOW
 					function initPlayer() {
