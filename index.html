@@ -1,183 +1,75 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="http-equiv" content="Content-type: text/html; charset=UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="autoprefix_styles.css">
+
+
 	<meta name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"/>
+	<script src="https://yandex.ru/games/sdk/v2"></script>
+	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+
+
+	<script src="createjs.min.js"></script>	
 </head>
 <body>
 	<div id = "body">
-		<div id="header">
-			<div><button></button></div>
-			<span id="ava"></span>
-			<input type="color" name="">
-		</div>
+		<div id = 'test'>абв</div>
+		<div id = 'LOL'>
+				
+				<div id = "img">N</div>
+			
 
+			    <span class="spinner">Loading...</span>
+
+		</div>
+		<div id = 'score_view'>
+			<div id = 'score' class="score">Cчет</div>
+			<div id = 'best_score' class="score">Рекорд</div>
+			
+		</div>
 			<div id = 'count'>Колличество</div>
-
-		<div>
-			<div id = 'ask_value'></div>
-		</div>
+		<button id = 'ask_value'></button>
 		<div id = 'input_value'>
 			<form>
-				<p><input id = "answer" type="text" name="" maxlength="1" placeholder="input characher"></p>
-				<p><input id = "button" type="button" value="Проверить" onclick="match_char()"></p>
+				<p><input id = "answer" type="text" name="" maxlength="1" placeholder="input chacher"></p>
+				<p><input id = "button" type="button" value="Проверить" onclick="match_ch()"></p>
 				<input type="color" name="">
 			</form>
+				
+
+		</div>
 				<div id="buttons">
 					<button class="button"></button>
 					<button class="button"></button>
 					<button class="button"></button>
 				</div>
+			<!--<div id = "locale_block"><button id="rw_lamp">💡</button></div>*/-->
+		<div id = "right_b">
+			<div id = "locale_block"><button id="locale">🇷🇺</button>
+				<button id="sound">				
+					🔊	
+				</button>
+			</div>
+			<div id = "locale_block"><button id="skip_rewarded">Продолжить с рекламой 🎥</button></div>
 
+			<div id = "locale_block"><button id="cancel_btn">Начать заново</button></div>
+		</div>
+		<div id = "adv_block_flex">
+			<div id="adv_block"></div>
 		</div>
 	</div>
 
 
-	<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src='https://vk.com/js/api/openapi.js?169',t.onload=function(){VK.Retargeting.Init("VK-RTRG-1697198-dg1wL"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-1697198-dg1wL" style="position:fixed; left:-999px;" alt=""/></noscript>
-	
-	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 
 
-
-	<script type="text/javascript">
-
-				vkBridge.send("VKWebAppInit", {});
-				vkBridge.send('VKWebAppRetargetingPixel', {
-								  pixel_code: 'VK-RTRG-1697198-dg1wL'
-								});
-
-
-				let buttons = document.getElementsByClassName("button");
-				let cryllic = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890";
-				let count = 0;
-				let count_view = document.getElementById("count");
-
-				//let btns = document.querySelectorAll('button');
-				
-
-		  		random_char = next_char();
-		  		ads();
-
-
-		  		function ads() {
-				  		vkBridge.send('VKWebAppShowBannerAd', {
-							  banner_location: 'bottom',
-							 
-							  can_close: 'false'
-							  })
-							 .then((data) => { 
-							    if (data.result) {
-							    	console.log('show ad')
-							      // Баннерная реклама отобразилась
-
-							    }
-							  })
-							  .catch((error) => {
-							    // Ошибка
-							    console.log(error);
-							  });
-		  			
-		  		}
-
-
-		  		function vibro() {
-		  			vkBridge.send('VKWebAppTapticNotificationOccurred', {
-														  type: 'error'
-														  })
-														  .then((data) => { 
-														    if (data.result) {
-														      // Информация передана генератору
-														    }
-														  })
-														  .catch((error) => {
-														    // Ошибка
-														    console.log(error);
-  });
-		  		}
-
-
-
-
-
-
-
-				
-
-
-
-
-				function getRandomInt(max) {
-		  			return Math.floor(Math.random() * max);
-		  		}
-
-
-
-
-		  		function match_char(char,btn){
-					//let answer_value = document.getElementById("answer").value;
-					let answer_value = char;
-					//console.log(char);
-					btn.style.backgroundColor="#f44336";
-
-		  			if (random_char === answer_value.toLowerCase()) {
-		  				count++;
-		  				
-		  				ads()
-		  				for (var i = buttons.length - 1; i >= 0; i--) {
-		  					buttons[i].style.backgroundColor = "#fff";
-		  				}
-		  		
-		  				//alert("Правильно");
-		  				random_char = next_char();
-		  				return random_char;
-		  			}else{
-		  				count = 0
-		  				count_view.innerText = "Ошибка"
-		  				vibro()
-		  				//alert("Попробуй ещё раз");
-		  			}
-
-		  		}
-
-		  		function next_char(){
-
-					let random_char = cryllic[getRandomInt(43)];
-					let ask_value = document.getElementById("ask_value");
-					document.getElementById("ask_value").innerText = random_char;
-					count_view.innerText ="Отгадано правильно подряд " + count
-					let answer_rand =  getRandomInt(buttons.length);
-					buttons[answer_rand].textContent = random_char;
-
-					for (let i = 0 ;i <= buttons.length-1;i++){
-						//console.log(answer_rand)
-						if (i !== answer_rand) {
-							buttons[i].textContent = cryllic[getRandomInt(cryllic.length)];
-							//console.log(buttons[i].textContent);
-
-
-						}
-						buttons[i].onclick = function (){match_char(buttons[i].textContent,buttons[i])};
-
-					}
-
-
-
-
-
-
-
-					//console.log(random_char);
-					return random_char; 
-
-
-
-		  		}
-		
 
 	
-		
+	
 
-	</script>
+
+	<script type="text/javascript" charset="utf-8" src="script.js"></script>
 </body>
 </html>

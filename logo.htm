@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		@font-face {
+				    font-family: ABC; /* Гарнитура шрифта */
+				    src: url('./fonts/AlphabetLoreFontRegular.ttf'); /* Путь к файлу со шрифтом */
+				   }
+@font-face {
+    font-family: 'Comforta'; /* Гарнитура шрифта */
+    src: url('../fonts/Comfortaa-Bold.ttf'); /* Путь к файлу со шрифтом */
+}
+ @font-face {
+    font-family: "sunnyspell";
+    src: url("../fonts/sunny-spells-font/SunnyspellsRegular-MV9ze.otf") format("opentype");
+} 
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+	overflow: hidden;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+
+
+}
+body{
+
+
+	display: flex;	
+	justify-content: space-between;
+	align-items: stretch;
+	
+	flex-direction: column;
+	background-color: #e9e9e9;
+	overflow: hidden;
+	/*background: no-repeat center/80% url("./images/background.jpg");*/
+	background-color: #AACBD2;
+
+	
+}
+
+
+		#body{
+			display: -webkit-flex;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			width: 100vw;
+		
+			max-width: 100vw;
+			max-height: 100vh;
+
+			flex-direction: column;
+			flex-wrap: wrap;
+		
+		}
+		div{
+			margin: 0;
+			padding: 0;
+			width: 15vw;
+			height: 15vh;
+			
+			display: flex;
+
+			background-color: transparent;
+
+			color: #555555;
+			
+			
+			font-family: 'sunnyspell';
+			transform: rotate(10deg);
+
+	
+		}
+		#ch{
+			display: flex;
+			font-size: 1.5vmin;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id = 'body'>
+	<div id = "ch">2 / 2 = ?</br></div>
+	
+		
+	</div>
+
+</body>
+<script type="text/javascript">
+						let arr1 = [];
+						let arr2 = [];
+		
+
+							while(arr1.length < 100){
+								let zero_div = Number(getRandomInt(10));
+								if (zero_div !== 0) {
+									arr1.push(zero_div);
+								}
+							}
+
+							while(arr2.length < 100){
+								let divider = Number(getRandomInt(100));
+								if (divider % arr1[0] === 0 && divider >= arr1[0]) {
+									arr2.push(divider);
+								}
+							}
+
+							//arr.push(arr[1] / arr[0]);
+
+												
+	//const arr = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
+	console.log(arr1.length)
+
+	for (let i = 0 ; i < arr1.length ; i += 1){
+		jesus = '<div>' + arr2[i] + ' / ' + arr1[i] + ' = ? ' +'</div>'
+		console.log(jesus)
+		document.getElementById("ch").insertAdjacentHTML('afterend', '<div display = "flex" font-size = "1.5vmin">' + arr2[i] + ' / ' + arr1[i] + '= ? ' +'</div>');
+	}
+
+						function getRandomInt(max) {
+						return Math.floor(Math.random() * max);
+					}
+
+
+</script>
+</html>

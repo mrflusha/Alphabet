@@ -1,4 +1,132 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300;700&display=swap');
+
+
+
+
+@font-face{
+	font-family: ftw;
+	src: url("./fonts/first_time_writing/FirstTimeWriting.ttf");
+}
+
+
+
+
+@font-face {
+    font-family: ABC; /* Гарнитура шрифта */
+    src: url('./fonts/AlphabetLoreFontRegular.ttf'); /* Путь к файлу со шрифтом */
+   }
+
+ @font-face {
+    font-family: yunga;
+    src: url("./fonts/younga/YUNGA-Display.otf") format("opentype");
+} 
+
+
+/*В 2019 году мы праздновали столетие Баухаус, в 2020-м году отмечаем юбилей ВХУТЕМАС и УНОВИС - школ, в которых родились конструктивизм и супрематизм.
+В честь этих событий я создал бесплатный супрематический шрифт.
+Основан на леттеринге Малевича (из плаката Доктор Мабузо) и шрифтовых экспериментах Йозефа Альберса.
+Подходит для дизайна плакатов, логотипов и коротких заголовков.
+
+Вы можете использовать его для коммерческой работы и делиться (с указанием имени автора).
+Запрещено продавать и модифицировать.
+
+https://www.behance.net/Denis_Masharov
+*/
+@font-face {
+    font-family: UNOVIS100;
+    src: url("./fonts/UNOVIS100/UNOVIS100.otf") format("opentype");
+}
+/*В 2019 году мы праздновали столетие Баухаус, в 2020-м году отмечаем юбилей ВХУТЕМАС и УНОВИС - школ, в которых родились конструктивизм и супрематизм.
+В честь этих событий я создал бесплатный супрематический шрифт.
+Основан на леттеринге Малевича (из плаката Доктор Мабузо) и шрифтовых экспериментах Йозефа Альберса.
+Подходит для дизайна плакатов, логотипов и коротких заголовков.
+
+Вы можете использовать его для коммерческой работы и делиться (с указанием имени автора).
+Запрещено продавать и модифицировать.
+
+https://www.behance.net/Denis_Masharov
+*/
+/*
+BLUP разработан Александрой Арсентьевой в Школе дизайна НИУ ВШЭ 
+*/
+@font-face{
+	font-family: blup;
+	src: url("./fonts/blup/blup-Regular_final.ttf");
+}/*
+BLUP разработан Александрой Арсентьевой в Школе дизайна НИУ ВШЭ 
+*/
+
+
+
+
+/*hard lvl*/
+
+@font-face{
+	font-family: iamblock;
+	src: url("./fonts/iamblock/iamblock-monospace.otf");
+}
+/*
+BRAT Этот шрифт распространяется по лицензии Creative Commons.
+Единственное условие бесплатного использования шрифта — это указание авторства в виде: Брат разработан Александрой Ботвиновой в Школе дизайна НИУ ВШЭ 
+*/
+@font-face{
+	font-family: brat;
+	src: url("./fonts/brat/Brat8.ttf");
+}
+/*
+BRAT Этот шрифт распространяется по лицензии Creative Commons.
+Единственное условие бесплатного использования шрифта — это указание авторства в виде: Брат разработан Александрой Ботвиновой в Школе дизайна НИУ ВШЭ 
+*/
+
+
+@font-face{
+	font-family: kablammo;
+	src: url("./fonts/kablammo/fonts/variable/Kablammo[MUTA].ttf");
+}
+
+
+.button:disabled{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+
+  opacity: 0.7;
+       -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+
+
+}
+
+
+
+
+#locale_block{
+	display: flex;
+	
+	flex-direction: row-reverse;
+	line-height: 3vh;
+	background-color: #555555;
+	color: #FFF;
+	font-size: 3rem;
+
+
+}
+#locale_block>button{
+	background-color: #555555;
+	color: #FFF;
+	font-size: 1rem;
+}
+
+#locale_block>button{
+	background-color: #555555;
+	color: #FFF;
+	font-size: 1rem;
+}
+
 *{
 	box-sizing: border-box;
 }
@@ -12,14 +140,59 @@ body{
 	display: flex;
 	
 	justify-content: center;
+	align-items: center;
 	background-color: rgb(128, 114, 136);
-	font-family: 'Phudu', cursive;
+	font-family: 'ftw', cursive;
+	overflow: hidden;
 
 	
 
 
 
 }
+#score_view{
+	display: flex;
+	flex-direction: row;
+	width: 97vw;
+	justify-content: flex-start;
+	align-content: flex-start;
+	       -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+}
+#score{
+	display: flex;
+	       -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+    font-size: 5vmin;
+}#best_score{
+	display: flex;
+	       -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+    font-size: 5vmin;
+}
+
+#lb{
+	margin-top: 1vh;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	background-color: rgb(128, 114, 136);
+	font-size: 5rem;
+}
+
+
 #ava{
 	overflow: hidden;
 	display: none;
@@ -33,24 +206,41 @@ body{
 }
 #header{
 
-	display: none;
+	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-between;
 
 }
 
 #body{
-	
+	max-width: 80vw;
+	max-height: 100vh;
+	width: 97.5vw;
 
-	
+	height: 90vh;
 
 	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: center;
+	
 	flex-direction: column;
+	-webkit-text-size-adjust: none;
 
 
+}
+
+#right_b{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 50px;
+	line-height: 50px;
+	font-size: 1rem;
+	width: 97.5vw;
+			-webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 
@@ -59,11 +249,16 @@ body{
 	display: flex;
 	
 	
-	color: #520000;
-	justify-content: space-around;
-	font-size: 1rem;
 	
+	
+	
+	
+	color: #520000;
+	justify-content: space-between;
+	font-size: 3rem;
 	line-height: 150px;
+	
+	
 	
 	-webkit-user-select: none;
     -moz-user-select: none;
@@ -81,14 +276,13 @@ body{
 	justify-content: center;
 	align-items: center;
 	font-size:8rem;
-	color: pink;
 	border: 1px solid #B2AE79;
 	border-radius: 50% 50%;
 	width: 200px;
 	height: 200px;
 	
 	background-color: rgb(118, 111, 111);
-	color: rgb(33, 68, 151);
+	color: #560319;
 
 	
 	
@@ -97,8 +291,8 @@ body{
 #input_value{
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
-	position: relative;
+	justify-content: center;
+	
 	margin-top: 10vh;
 }
 
@@ -107,25 +301,39 @@ body{
 
 #buttons{
 	display: flex;
-	align-items: stretch;
-	justify-content: space-between;
-	position: relative;
+	
+	width: 55vw;
+
+	
+	justify-content: space-around;
+
+
 
 }
 
 #buttons>button{
-	margin-right: 5%;
+	
 	display: flex;
 
 	background-color: white; 
     color: #371E37; 
     border: 2px solid #C392C1;
     border-radius: 25% 10%;
-    font-size: 5rem;
-    font-family: 'Phudu', cursive;
+    font-size: 4rem;
+    font-family: ftw;
     position: relative;
+    cursor: pointer;
+    
+     -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
 
 }
+
+
 
 /*
 #buttons>button:hover{
@@ -137,3 +345,50 @@ body{
 form{
 	display: none;
 }
+
+#locale_block{
+	background-color: #555555;
+	color: #FFF;
+	font-size: 3rem;
+	 -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+	
+}
+
+#sound{
+	display: flex;
+	font-size: 15vmin;
+	font-family: ABC;
+}
+
+
+#adv_block_flex{
+	position: absolute;
+	display: none;
+
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+    background-color: white;
+	justify-content: center;
+	align-items: center;
+	z-index: 6;
+}
+#adv_block{
+	display: flex;
+	font-family: 'Phudu';
+	font-size: 8vmin;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+
+}
+
+
