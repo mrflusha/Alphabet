@@ -1,4 +1,9 @@
-﻿//vkBridge.send("VKWebAppInit", {});
+//document.write("hello")
+vkBridge.send("VKWebAppInit", {});
+createjs.Sound.registerPlugins([createjs.HTMLAudioPlugin]
+
+
+//vkBridge.send("VKWebAppInit", {});
 
 /* YANDEX FUNCTIONS DONT NEED NOW
 					function initPlayer() {
