@@ -1,6 +1,6 @@
 //document.write("hello")
 vkBridge.send("VKWebAppInit", {});
-createjs.Sound.registerPlugins([createjs.HTMLAudioPlugin]
+createjs.Sound.registerPlugins([createjs.HTMLAudioPlugin])
 
 
 //vkBridge.send("VKWebAppInit", {});
