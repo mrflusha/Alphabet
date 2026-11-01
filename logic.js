@@ -1,4 +1,4 @@
-vkBridge.send("VKWebAppInit", {});
+
 createjs.Sound.registerPlugins([createjs.HTMLAudioPlugin])
 
 var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
